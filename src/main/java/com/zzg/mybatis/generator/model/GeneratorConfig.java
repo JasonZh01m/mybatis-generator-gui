@@ -66,6 +66,11 @@ public class GeneratorConfig {
 
     private boolean jsr310Support;
 
+	/**
+	 * TINY/SMALLINT to Integer
+	 */
+	private boolean tinySmall2IntSupport;
+
     public boolean isJsr310Support() {
         return jsr310Support;
     }
@@ -74,7 +79,15 @@ public class GeneratorConfig {
         this.jsr310Support = jsr310Support;
     }
 
-    public boolean isUseSchemaPrefix() {
+	public boolean isTinySmall2IntSupport() {
+		return tinySmall2IntSupport;
+	}
+
+	public void setTinySmall2IntSupport(boolean tinySmall2IntSupport) {
+		this.tinySmall2IntSupport = tinySmall2IntSupport;
+	}
+
+	public boolean isUseSchemaPrefix() {
         return useSchemaPrefix;
     }
 

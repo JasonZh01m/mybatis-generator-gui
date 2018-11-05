@@ -97,6 +97,8 @@ public class MainUIController extends BaseFXController {
     @FXML
     private CheckBox jsr310Support;
     @FXML
+    private CheckBox tinySmall2Integer;
+    @FXML
     private TreeView<String> leftDBTree;
     // Current selected databaseConfig
     private DatabaseConfig selectedDatabaseConfig;
@@ -352,6 +354,7 @@ public class MainUIController extends BaseFXController {
         generatorConfig.setUseDAOExtendStyle(useDAOExtendStyle.isSelected());
         generatorConfig.setUseSchemaPrefix(useSchemaPrefix.isSelected());
         generatorConfig.setJsr310Support(jsr310Support.isSelected());
+        generatorConfig.setTinySmall2IntSupport(tinySmall2Integer.isSelected());
         return generatorConfig;
     }
 

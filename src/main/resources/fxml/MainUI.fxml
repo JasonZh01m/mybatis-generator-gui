@@ -220,6 +220,8 @@
                                          <children>
                                              <CheckBox fx:id="useDAOExtendStyle" mnemonicParsing="false" selected="true" text="DAO方法抽出到公共父接口" />
                                              <CheckBox fx:id="jsr310Support" mnemonicParsing="false" prefHeight="16.0" prefWidth="252.0" text="JSR310: Date and Time API" />
+                                             <CheckBox fx:id="tinySmall2Integer" mnemonicParsing="false" prefHeight="16.0"
+                                                 prefWidth="252.0" text="TINYINT/SMALLINT -> Integer" />
                                          </children>
                                      </HBox>
                                     <HBox spacing="18.0">

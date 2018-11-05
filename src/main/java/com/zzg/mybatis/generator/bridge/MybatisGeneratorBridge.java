@@ -210,6 +210,14 @@ public class MybatisGeneratorBridge {
             javaTypeResolverConfiguration.setConfigurationType("com.zzg.mybatis.generator.plugins.JavaTypeResolverJsr310Impl");
             context.setJavaTypeResolverConfiguration(javaTypeResolverConfiguration);
         }
+
+        //for SMALLINT/TINYINT to Integer
+        if (generatorConfig.isTinySmall2IntSupport()) {
+            JavaTypeResolverConfiguration javaTypeResolverConfiguration = new JavaTypeResolverConfiguration();
+            javaTypeResolverConfiguration.setConfigurationType("com.zzg.mybatis.generator.plugins.JavaTypeResolverTinySmall2Integer");
+            context.setJavaTypeResolverConfiguration(javaTypeResolverConfiguration);
+        }
+
         //forUpdate 插件
         if(generatorConfig.isNeedForUpdate()) {
             if (DbType.MySQL.name().equals(dbType)
